@@ -1,0 +1,22 @@
+name: Pruebas CI
+
+on:
+  push:
+    branches:
+      - main
+      - fix/descuento
+
+jobs:
+  pruebas:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener el codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Ejecutar pruebas
+        run: npm test
