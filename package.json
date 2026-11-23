@@ -1,0 +1,9 @@
+{
+  "name": "proyecto-taller-ci",
+  "version": "1.0.0",
+  "description": "Proyecto base para el Taller parcial 2",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  }
+}
